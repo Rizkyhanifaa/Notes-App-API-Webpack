@@ -1,0 +1,114 @@
+/* reset style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#welcome-message {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 20px; 
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.welcome-text {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+.welcome-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #6a0dad;
+}
+
+.welcome-text p {
+    font-size: 15px;
+    color: #555;
+}
+
+.welcome-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.welcome-images img {
+    width: 150px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+/* Main - Form */
+main {
+    display: grid;
+    place-items: center; 
+    min-height: 60vh; 
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px 25px;
+    width: 40%; /* Ukuran default untuk layar besar */
+    max-width: 500px;
+    min-width: 320px;
+    background: white;
+    text-align: center;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+#showArchived {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#showArchived:hover {
+    background-color: #0056b3;
+}
+#showArchived:active {
+    background-color: #004085;
+}
+
+/*Main - List Catatan*/
+#listNote {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+/* Agar layar responsif */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap; /*ketika layarnya kecil, elemen di main akan sejajar vertikal*/
+    }
+
+    main aside {
+        align-self: center ;
+    }
+}
+
